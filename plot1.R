@@ -6,9 +6,10 @@ library(jpeg)
 dato <- read.csv("household_power_consumption.txt", sep = ";" , header = TRUE)
 feb <- subset(dato, as.Date(dato$Date, "%d/%m/%Y") >= "2007-02-01" & as.Date(dato$Date, "%d/%m/%Y") <= "2007-02-02"  )
 
+par(mfrow = c(1,1))
 hist(as.numeric(feb$Global_active_power), main="Global Active Power", col = "red", xlab = "Global Active Power (kilowatts)")
 
-dev.copy(png, file="Plot1.png")
+dev.copy(png, file="plot1.png", width =480 , height = 480)
 dev.off()
 
 

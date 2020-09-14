@@ -9,11 +9,12 @@ feb <- subset(dato, as.Date(dato$Date, "%d/%m/%Y") >= "2007-02-01" & as.Date(dat
 
 feb$DateTime <- strptime(paste(feb$Date, feb$Time), format="%d/%m/%Y %H:%M:%S")
 
+par(mfrow = c(1,1))
 with(feb, plot(DateTime, Sub_metering_1, type = "l", ylab = "Energy sub metering"))
 lines(feb$DateTime, feb$Sub_metering_2, col = "red")
 lines(feb$DateTime, feb$Sub_metering_3, col = "blue")
 
 legend("topright", col=c("black", "red", "blue"),legend=c("Sub_metering_1","Sub_metering_2", "Sub_metering_3" ), lty = 1)
 
-dev.copy(png, file="Plot3.png")
+dev.copy(png, file="plot3.png", width =480 , height = 480)
 dev.off()

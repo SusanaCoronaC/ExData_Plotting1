@@ -9,10 +9,11 @@ feb <- subset(dato, as.Date(dato$Date, "%d/%m/%Y") >= "2007-02-01" & as.Date(dat
 
 feb$DateTime <- strptime(paste(feb$Date, feb$Time), format="%d/%m/%Y %H:%M:%S")
 
+par(mfrow = c(1,1))
 plot(feb$DateTime, feb$Global_active_power, type="l" , 
      ylab="Global Active Power (kilowatts)", xlab="Datetime")
 
-dev.copy(png, file="Plot2.png")
+dev.copy(png, file="plot2.png", width =480 , height = 480)
 dev.off()
 
 #title(main="Power  vs Datetime")

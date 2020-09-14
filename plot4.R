@@ -31,5 +31,5 @@ legend("topright", col=c("black", "red", "blue"),legend=c("Sub_metering_1","Sub_
 plot(feb$DateTime, feb$Global_reactive_power, type="l" , 
      ylab="Global reactive power", xlab="Datetime")
 
-dev.copy(png, file="Plot4.png")
+dev.copy(png, file="plot4.png", width =480 , height = 480)
 dev.off()
