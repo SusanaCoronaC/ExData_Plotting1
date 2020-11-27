@@ -3,7 +3,13 @@ pipeline {
   stages {
     stage('Inicio_environment') {
       steps {
-        echo 'Iniciando construcción'
+        echo 'Iniciando construcciÃ³n'
+      }
+    }
+
+    stage('instalacion') {
+      steps {
+        sh 'shell'
       }
     }
 
