@@ -20,5 +20,11 @@ ls -ltr'''
       }
     }
 
+    stage('limpieza') {
+      steps {
+        sh 'rm -r'
+      }
+    }
+
   }
 }
