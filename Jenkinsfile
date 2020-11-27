@@ -13,5 +13,12 @@ pipeline {
       }
     }
 
+    stage('compilacion') {
+      steps {
+        sh '''gcc programa.c -o mi_programa
+ls -ltr'''
+      }
+    }
+
   }
 }
