@@ -9,7 +9,7 @@ pipeline {
 
     stage('instalacion') {
       steps {
-        sh 'shell'
+        sh 'gcc -v'
       }
     }
 
